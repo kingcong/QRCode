@@ -53,9 +53,9 @@
 		7344E3721CF16F7500BBBE7A /* QRCodeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QRCodeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7344E3761CF16F7500BBBE7A /* QRCodeUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QRCodeUITests.m; sourceTree = "<group>"; };
 		7344E3781CF16F7500BBBE7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7344E3841CF16FC500BBBE7A /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QRCodeViewController.h; sourceTree = "<group>"; };
-		7344E3851CF16FC500BBBE7A /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QRCodeViewController.m; sourceTree = "<group>"; };
-		7344E3861CF16FC500BBBE7A /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QRCodeViewController.xib; sourceTree = "<group>"; };
+		7344E3841CF16FC500BBBE7A /* QRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QRCodeViewController.h; path = ../QRCodeViewController.h; sourceTree = "<group>"; };
+		7344E3851CF16FC500BBBE7A /* QRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QRCodeViewController.m; path = ../QRCodeViewController.m; sourceTree = "<group>"; };
+		7344E3861CF16FC500BBBE7A /* QRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = QRCodeViewController.xib; path = ../QRCodeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,9 +106,7 @@
 		7344E3501CF16F7500BBBE7A /* QRCode */ = {
 			isa = PBXGroup;
 			children = (
-				7344E3841CF16FC500BBBE7A /* QRCodeViewController.h */,
-				7344E3851CF16FC500BBBE7A /* QRCodeViewController.m */,
-				7344E3861CF16FC500BBBE7A /* QRCodeViewController.xib */,
+				73AEE02C1D05469F004A52F2 /* Lib */,
 				7344E3541CF16F7500BBBE7A /* AppDelegate.h */,
 				7344E3551CF16F7500BBBE7A /* AppDelegate.m */,
 				7344E3571CF16F7500BBBE7A /* ViewController.h */,
@@ -146,6 +144,16 @@
 				7344E3781CF16F7500BBBE7A /* Info.plist */,
 			);
 			path = QRCodeUITests;
+			sourceTree = "<group>";
+		};
+		73AEE02C1D05469F004A52F2 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				7344E3841CF16FC500BBBE7A /* QRCodeViewController.h */,
+				7344E3851CF16FC500BBBE7A /* QRCodeViewController.m */,
+				7344E3861CF16FC500BBBE7A /* QRCodeViewController.xib */,
+			);
+			path = Lib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +223,7 @@
 				TargetAttributes = {
 					7344E34D1CF16F7500BBBE7A = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = L7M5EDYWUQ;
 					};
 					7344E3661CF16F7500BBBE7A = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -425,10 +434,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QRCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kingcong.QRCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -436,10 +448,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = QRCode/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = kingcong.QRCode;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -508,6 +523,7 @@
 				7344E37D1CF16F7500BBBE7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7344E37E1CF16F7500BBBE7A /* Build configuration list for PBXNativeTarget "QRCodeTests" */ = {
 			isa = XCConfigurationList;
@@ -516,6 +532,7 @@
 				7344E3801CF16F7500BBBE7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7344E3811CF16F7500BBBE7A /* Build configuration list for PBXNativeTarget "QRCodeUITests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +541,7 @@
 				7344E3831CF16F7500BBBE7A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

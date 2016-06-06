@@ -110,6 +110,9 @@
     [self startAnimation];
     
     [self startScan];
+    
+    [[[self.navigationController.navigationBar subviews] objectAtIndex:0] setAlpha:0];
+
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -191,10 +194,22 @@
         return;
     }
     
+    //判断是否有数据
+    if (metadataObjects != nil && [metadataObjects count] > 0) {
+        AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects lastObject];
+        //判断回传的数据类型
+        if ([[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]) {
+            self.resultLab.text = [metadataObjects.lastObject stringValue];
+            [self.resultLab sizeToFit];
+        }
+    }
+
+    
     // 1.获取扫描到的数据
     // 注意: 要使用stringValue
-    self.resultLab.text = [metadataObjects.lastObject stringValue];
-    [self.resultLab sizeToFit];
+    
+//    [[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]
+    
     
     // 2.获取扫描到的二维码的位置
     // 2.1转换坐标

@@ -20,9 +20,10 @@
     
 }
 
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
+- (IBAction)scanCode:(UIButton *)sender {
+    
     QRCodeViewController *qrVc = [[QRCodeViewController alloc] init];
+    qrVc.view.backgroundColor = [UIColor clearColor];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:qrVc];
     
     [self presentViewController:nav animated:YES completion:nil];
