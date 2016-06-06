@@ -194,6 +194,10 @@
         return;
     }
     
+    
+    // 1.获取扫描到的数据
+    // 注意: 要使用stringValue
+
     //判断是否有数据
     if (metadataObjects != nil && [metadataObjects count] > 0) {
         AVMetadataMachineReadableCodeObject *metadataObj = [metadataObjects lastObject];
@@ -205,10 +209,7 @@
     }
 
     
-    // 1.获取扫描到的数据
-    // 注意: 要使用stringValue
     
-//    [[metadataObj type] isEqualToString:AVMetadataObjectTypeQRCode]
     
     
     // 2.获取扫描到的二维码的位置
